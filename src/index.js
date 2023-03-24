@@ -4,6 +4,8 @@ import { fetchCountries } from './fetchCountries';
 
 import debounce from 'lodash.debounce';
 
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 const inputForm = document.querySelector('#search-box');
 
 const DEBOUNCE_DELAY = 300;
