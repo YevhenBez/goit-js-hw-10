@@ -15,7 +15,8 @@ const handleFormInput = event => {
     
     
     
-    console.log(fetchCountries(seekedCoutry));
-
+    fetchCountries(seekedCoutry).then(response => {
+        console.log(response);
+    }).catch(error => { console.log(error); })
 }
-inputForm.addEventListener('input', handleFormInput);
+inputForm.addEventListener('input', debounce(handleFormInput, DEBOUNCE_DELAY));
